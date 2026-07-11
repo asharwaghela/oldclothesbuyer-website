@@ -7,9 +7,13 @@ import express from 'express';
 import * as path from 'path';
 import * as fs from 'fs';
 import { execSync } from 'child_process';
+import compression from 'compression';
 
 const app = express();
 const PORT = 3000;
+
+// Enable gzip/deflate compression
+app.use(compression());
 
 // Log all incoming requests
 app.use((req, res, next) => {
@@ -75,7 +79,17 @@ app.use((req, res, next) => {
 // e.g., /thane will serve /thane.html, and / will serve index.html
 app.use(express.static(publicDir, {
   extensions: ['html', 'htm'],
-  index: 'index.html'
+  index: 'index.html',
+  maxAge: '1d',
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.html') || filePath.endsWith('.htm')) {
+      res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+    } else if (filePath.match(/\.(js|css|webp|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|otf)$/i)) {
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    } else {
+      res.setHeader('Cache-Control', 'public, max-age=86400');
+    }
+  }
 }));
 
 // Fallback to custom 404.html if file not found

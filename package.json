@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "rm -rf dist/public && tsx server.ts",
-    "build": "esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs && mkdir -p dist/public && cp -r 404.html CNAME _redirects account-deletion.html ads.txt favicon.ico logo.webp navi-mumbai.html prices.html privacy-policy.html robots.txt sell-old-clothes-before-shifting-thane.html sitemap.xml terms-and-conditions.html textile-reuse-recycling-initiative.html thane.html index.html images caving-lbn dist/public/ 2>/dev/null || true",
+    "dev": "npx tailwindcss -i input.css -o tailwind.min.css --minify && rm -rf dist/public && tsx server.ts",
+    "build": "npx tailwindcss -i input.css -o tailwind.min.css --minify && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs && mkdir -p dist/public && cp -r 404.html CNAME _redirects account-deletion.html ads.txt favicon.ico logo.webp navi-mumbai.html prices.html privacy-policy.html robots.txt sell-old-clothes-before-shifting-thane.html sitemap.xml terms-and-conditions.html textile-reuse-recycling-initiative.html thane.html index.html tailwind.min.css images caving-lbn dist/public/ 2>/dev/null || true",
     "start": "node dist/server.cjs",
     "clean": "rm -rf dist server.js",
     "lint": "tsc -p tsconfig.json --noEmit"
@@ -13,23 +13,26 @@
   "dependencies": {
     "@google/genai": "^2.4.0",
     "@tailwindcss/vite": "^4.1.14",
+    "@types/compression": "^1.8.1",
     "@vitejs/plugin-react": "^5.0.4",
+    "compression": "^1.8.1",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
     "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
-    "vite": "^6.2.3",
-    "express": "^4.21.2",
-    "dotenv": "^17.2.3",
-    "motion": "^12.23.24"
+    "vite": "^6.2.3"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.3.2",
+    "@types/express": "^4.17.21",
     "@types/node": "^22.14.0",
     "autoprefixer": "^10.4.21",
     "esbuild": "^0.25.0",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
-    "vite": "^6.2.3",
-    "@types/express": "^4.17.21"
+    "vite": "^6.2.3"
   }
 }
