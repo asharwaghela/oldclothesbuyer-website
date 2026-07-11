@@ -11,6 +11,12 @@ import { execSync } from 'child_process';
 const app = express();
 const PORT = 3000;
 
+// Log all incoming requests
+app.use((req, res, next) => {
+  console.log(`[Request] ${req.method} ${req.url} - Referer: ${req.headers.referer || 'none'}`);
+  next();
+});
+
 // Resolve public folder: check for dist/public first, otherwise use root directory
 const publicDir = fs.existsSync(path.join(process.cwd(), 'dist', 'public'))
   ? path.join(process.cwd(), 'dist', 'public')
@@ -28,19 +34,13 @@ function downloadFile(url: string, dest: string): void {
 }
 
 function isValidImage(filePath: string): boolean {
-  if (!fs.existsSync(filePath)) {
-    return false;
-  }
-  if (filePath.endsWith('.ico')) {
-    try {
-      return fs.statSync(filePath).size > 100;
-    } catch {
+  try {
+    if (!fs.existsSync(filePath)) {
       return false;
     }
-  }
-  try {
-    execSync(`identify "${filePath}"`, { stdio: 'ignore' });
-    return true;
+    const size = fs.statSync(filePath).size;
+    // Check that file size is reasonable (not 0 or extremely small)
+    return size > 100;
   } catch {
     return false;
   }
@@ -48,11 +48,10 @@ function isValidImage(filePath: string): boolean {
 
 async function ensureAssets() {
   const assets = [
-    { url: 'https://oldclothesbuyer.com/images/logo.webp', relPath: 'images/logo.webp' },
+    { url: 'https://oldclothesbuyer.com/logo.webp', relPath: 'images/logo.webp' },
     { url: 'https://oldclothesbuyer.com/logo.webp', relPath: 'logo.webp' },
     { url: 'https://oldclothesbuyer.com/logo.png', relPath: 'images/logo.png' },
     { url: 'https://oldclothesbuyer.com/logo.png', relPath: 'logo.png' },
-    { url: 'https://oldclothesbuyer.com/images/Image1.jpg', relPath: 'images/Image1.jpg' },
     { url: 'https://oldclothesbuyer.com/favicon.ico', relPath: 'favicon.ico' },
     { url: 'https://oldclothesbuyer.com/favicon.ico', relPath: 'images/favicon.ico' }
   ];
