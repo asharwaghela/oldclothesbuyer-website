@@ -1,0 +1,6 @@
+{
+  "name": "Asha Old Clothes Buyer",
+  "description": "A secure and professional portal for Asha Old Clothes Buyer (आशा पुराना कपड़ा खरीदार) where users can estimate the value of their old clothes, schedule collections, and view privacy policies and terms of service.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
