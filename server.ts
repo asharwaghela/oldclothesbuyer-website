@@ -11,10 +11,10 @@ import { execSync } from 'child_process';
 const app = express();
 const PORT = 3000;
 
-// Resolve public folder: check for dist/public first, otherwise use public
+// Resolve public folder: check for dist/public first, otherwise use root directory
 const publicDir = fs.existsSync(path.join(process.cwd(), 'dist', 'public'))
   ? path.join(process.cwd(), 'dist', 'public')
-  : path.join(process.cwd(), 'public');
+  : process.cwd();
 
 console.log(`[Server] Serving static files from: ${publicDir}`);
 
@@ -58,11 +58,11 @@ async function ensureAssets() {
   ];
 
   for (const asset of assets) {
-    const mainDest = path.join(process.cwd(), 'public', asset.relPath);
+    const mainDest = path.join(process.cwd(), asset.relPath);
     
-    // Ensure in public folder
+    // Ensure in root folder
     if (!isValidImage(mainDest)) {
-      console.log(`[Assets] Asset missing or invalid/corrupted in public folder: ${mainDest}`);
+      console.log(`[Assets] Asset missing or invalid/corrupted in root folder: ${mainDest}`);
       try {
         downloadFile(asset.url, mainDest);
       } catch (err) {
@@ -71,7 +71,7 @@ async function ensureAssets() {
     }
 
     // Ensure in publicDir (which could be dist/public in prod)
-    if (publicDir !== path.join(process.cwd(), 'public')) {
+    if (publicDir !== process.cwd()) {
       const prodDest = path.join(publicDir, asset.relPath);
       if (!isValidImage(prodDest)) {
         console.log(`[Assets] Asset missing or invalid/corrupted in prod/dist folder: ${prodDest}`);
