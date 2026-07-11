@@ -264,52 +264,577 @@
 </div>
 
 <!-- HERO HEADER -->
-<section class="relative py-16 bg-gradient-to-b from-teal-50/50 via-emerald-50/10 to-transparent overflow-hidden">
-  <div class="mx-auto max-w-4xl px-6 relative z-10 text-center">
-    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight font-display">
+<section class="relative py-16 sm:py-20 bg-gradient-to-b from-teal-50/50 via-emerald-50/10 to-transparent overflow-hidden">
+  <div class="absolute inset-0 z-0 pointer-events-none opacity-30">
+    <div class="absolute top-1/4 left-1/10 w-72 h-72 bg-teal-200/30 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 right-1/10 w-72 h-72 bg-emerald-200/30 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="mx-auto max-w-6xl px-6 relative z-10 text-center">
+    <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-teal-50 border border-teal-100 text-teal-600 text-3xl mb-4 shadow-sm shadow-teal-100/50 select-none">
+      🛡️
+    </div>
+
+    <!-- Badges -->
+    <div class="flex flex-wrap items-center justify-center gap-2 mb-6">
+      <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-slate-900 text-white text-[10px] sm:text-xs font-bold tracking-wide font-sans shadow-sm">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        Last Updated: 08 July 2026
+      </span>
+      <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-teal-50 text-teal-850 border border-teal-100 text-[10px] sm:text-xs font-bold tracking-wide font-sans">
+        🔒 Secure Data
+      </span>
+      <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-50 text-emerald-850 border border-emerald-100 text-[10px] sm:text-xs font-bold tracking-wide font-sans">
+        🤖 Google Play Compliant
+      </span>
+    </div>
+
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight font-display max-w-3xl mx-auto">
       Privacy Policy
     </h1>
-    <p class="text-sm text-slate-500 mt-3 font-sans">Last Updated: 08 July 2026</p>
+    <p class="text-sm sm:text-base text-slate-650 mt-3 leading-relaxed max-w-xl mx-auto font-sans">
+      How Asha Old Clothes Buyer collects, protects, and manages customer, device, and authentication records for transparent circular logistics.
+    </p>
   </div>
 </section>
 
-<!-- MAIN CONTENT -->
-<main class="mx-auto px-6 py-12 max-w-4xl relative z-10">
-  <div class="bg-white rounded-[32px] p-8 sm:p-12 shadow-sm border border-slate-100 space-y-8 font-sans">
+<!-- BREADCRUMBS & MAIN CONTAINER -->
+<main class="mx-auto px-6 pb-24 max-w-7xl relative z-10 -mt-2">
+  
+  <!-- Breadcrumb -->
+  <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-8 font-sans" aria-label="Breadcrumb">
+    <a href="/" class="hover:text-teal-600 transition-colors">Home</a>
+    <span class="text-slate-300">/</span>
+    <span class="text-slate-800 font-bold">Privacy Policy</span>
+  </nav>
+
+  <!-- IMPORTANT CORPORATE DISCLAIMER CARD -->
+  <div class="bg-gradient-to-r from-amber-50 to-orange-50/60 border border-amber-200 p-6 sm:p-8 rounded-2xl shadow-sm mb-12 relative overflow-hidden">
+    <div class="absolute -right-8 -bottom-8 text-8xl opacity-5 select-none pointer-events-none">⚠️</div>
+    <div class="flex flex-col sm:flex-row gap-4 items-start">
+      <div class="w-10 h-10 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center text-amber-700 text-xl shrink-0">
+        ⚠️
+      </div>
+      <div class="space-y-2.5">
+        <h3 class="text-base font-black text-amber-950 font-display">Important Corporate Status Disclosure</h3>
+        <p class="text-xs sm:text-sm text-amber-900/90 leading-relaxed font-sans">
+          Asha Old Clothes Buyer is <strong class="text-amber-950 font-bold">NOT a Non-Governmental Organization (NGO), charitable trust, or donation-funded non-profit entity.</strong> We are a private, commercial textile sorting, collection, and circular reuse company.
+        </p>
+        <p class="text-[11px] sm:text-xs text-amber-800/90 leading-relaxed font-sans">
+          Customers choosing our optional "Donate" pickup service do so voluntarily to support responsible clothing lifecycles, sorting, and eco-friendly distribution networks. Because we operate as a private corporate venture to maintain our doorstep transport fleet and payroll, <strong class="text-amber-950 font-bold">no tax exemption receipts, 80G deduction benefits, or formal donation certificates can be provided.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
     
-    <div class="space-y-3">
-      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 font-display">Information We Collect</h2>
-      <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-        We collect your name, mobile number, email, address, booking details and location (with your explicit permission) to schedule and provide seamless doorstep clothing pickup services.
-      </p>
-    </div>
+    <!-- Sidebar Table of Contents (Sticky on Desktop, Hidden on Mobile) -->
+    <aside class="hidden lg:block lg:col-span-4 sticky top-28 self-start space-y-6">
+      <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100/90">
+        <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-3.5 font-display flex items-center gap-1.5">
+          <span>📋</span> Document Directory
+        </h4>
+        <nav class="space-y-0.5 max-h-[50vh] overflow-y-auto pr-1 custom-scrollbar text-xs font-sans">
+          <a href="#introduction" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">1. Introduction</a>
+          <a href="#about" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">2. About the Company</a>
+          <a href="#collection" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">3. Information We Collect</a>
+          <a href="#google-signin" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">4. Google Sign-In</a>
+          <a href="#credentials" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">5. Email & Password Login</a>
+          <a href="#firebase-auth" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">6. Firebase Authentication</a>
+          <a href="#booking-info" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">7. Booking Information</a>
+          <a href="#pickup-address" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">8. Pickup Address</a>
+          <a href="#location-permission" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">9. Location Permission</a>
+          <a href="#camera-uploads" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">10. Camera & Photo Uploads</a>
+          <a href="#push-notifications" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">11. Push Notifications</a>
+          <a href="#firestore" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">12. Firebase Firestore</a>
+          <a href="#fcm" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">13. Firebase Cloud Messaging</a>
+          <a href="#how-use" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">14. How We Use Information</a>
+          <a href="#sharing" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">15. Information Sharing</a>
+          <a href="#third-party" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">16. Third-Party Services</a>
+          <a href="#cookies" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">17. Cookies Policy</a>
+          <a href="#analytics" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">18. Traffic Analytics</a>
+          <a href="#security" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">19. Data Security Systems</a>
+          <a href="#retention" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">20. Data Retention Mandates</a>
+          <a href="#rights" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">21. User Data Rights</a>
+          <a href="#profile-mgmt" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">22. Profile Management</a>
+          <a href="#account-deletion" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">23. Account Deletion</a>
+          <a href="#children" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">24. Children's Privacy</a>
+          <a href="#availability" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">25. Regional Availability</a>
+          <a href="#contact" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">26. Contact Details</a>
+          <a href="#faqs" class="toc-link block px-2.5 py-1.5 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all duration-200">27. Security FAQs</a>
+        </nav>
+      </div>
 
-    <div class="space-y-3">
-      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 font-display">How We Secure Your Data</h2>
-      <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-        We use secure cloud solutions, including Firebase Authentication and Firestore, to safely manage your account, preferences, and pickup bookings. Your data is encrypted in transit and at rest.
-      </p>
-    </div>
+      <!-- Quick Sidebar Support Card (Desktop) -->
+      <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-5 text-white shadow-lg relative overflow-hidden">
+        <h4 class="text-sm font-bold font-display mb-1.5">Direct Compliance Help</h4>
+        <p class="text-[11px] text-slate-300 leading-relaxed mb-4">Our operations office and data safety coordinator is accessible instantly via chat.</p>
+        <div class="space-y-2">
+          <a href="https://wa.me/918828743006?text=Hi!%20I%20have%20a%20question%20regarding%20Asha%20Old%20Clothes%20Buyer%20Privacy%20Policy." class="flex items-center justify-center gap-2 w-full py-2 rounded-xl bg-teal-500 hover:bg-teal-600 transition text-white text-xs font-bold font-sans">
+            💬 WhatsApp Chat
+          </a>
+          <a href="tel:+918828743006" class="flex items-center justify-center gap-2 w-full py-2 rounded-xl bg-white/10 hover:bg-white/20 transition text-white text-xs font-bold font-sans">
+            📞 Direct Call Support
+          </a>
+        </div>
+      </div>
+    </aside>
 
-    <div class="space-y-3">
-      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 font-display">Data Sharing Policy</h2>
-      <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-        We value your privacy. We never sell, lease, rent, or trade your personal information to third parties. Your details are only shared with our authorized local pickup partners (e.g., in Thane or Navi Mumbai) to execute the specific pickup you request.
-      </p>
-    </div>
+    <!-- Main Content Block -->
+    <div class="col-span-1 lg:col-span-8 space-y-12 lg:space-y-14">
+      
+      <!-- Mobile Table of Contents Accordion (Visible only on mobile/tablet) -->
+      <div class="block lg:hidden bg-white rounded-2xl border border-slate-150 shadow-sm mb-6 overflow-hidden">
+        <button id="mobileTocToggle" class="w-full flex items-center justify-between px-5 py-4 bg-slate-50/50 hover:bg-slate-100/50 transition-all text-left focus:outline-none">
+          <div class="flex items-center gap-2.5">
+            <span class="text-base">📋</span>
+            <span class="text-sm font-black text-slate-800 font-display">Document Directory</span>
+          </div>
+          <span id="mobileTocArrow" class="text-slate-500 transition-transform duration-300">
+            <svg class="w-4 h-4 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </button>
+        <div id="mobileTocContent" class="hidden border-t border-slate-100/80 max-h-[50vh] overflow-y-auto custom-scrollbar">
+          <nav class="p-4 space-y-1 text-xs font-sans">
+            <a href="#introduction" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">1. Introduction</a>
+            <a href="#about" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">2. About the Company</a>
+            <a href="#collection" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">3. Information We Collect</a>
+            <a href="#google-signin" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">4. Google Sign-In</a>
+            <a href="#credentials" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">5. Email & Password Login</a>
+            <a href="#firebase-auth" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">6. Firebase Authentication</a>
+            <a href="#booking-info" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">7. Booking Information</a>
+            <a href="#pickup-address" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">8. Pickup Address</a>
+            <a href="#location-permission" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">9. Location Permission</a>
+            <a href="#camera-uploads" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">10. Camera & Photo Uploads</a>
+            <a href="#push-notifications" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">11. Push Notifications</a>
+            <a href="#firestore" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">12. Firebase Firestore</a>
+            <a href="#fcm" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">13. Firebase Cloud Messaging</a>
+            <a href="#how-use" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">14. How We Use Information</a>
+            <a href="#sharing" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">15. Information Sharing</a>
+            <a href="#third-party" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">16. Third-Party Services</a>
+            <a href="#cookies" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">17. Cookies Policy</a>
+            <a href="#analytics" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">18. Traffic Analytics</a>
+            <a href="#security" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">19. Data Security Systems</a>
+            <a href="#retention" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">20. Data Retention Mandates</a>
+            <a href="#rights" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">21. User Data Rights</a>
+            <a href="#profile-mgmt" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">22. Profile Management</a>
+            <a href="#account-deletion" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">23. Account Deletion</a>
+            <a href="#children" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">24. Children's Privacy</a>
+            <a href="#availability" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">25. Regional Availability</a>
+            <a href="#contact" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">26. Contact Details</a>
+            <a href="#faqs" class="mobile-toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-teal-600 hover:bg-slate-50 font-semibold transition-all">27. Security FAQs</a>
+          </nav>
+        </div>
+      </div>
 
-    <div class="bg-amber-50 border border-amber-100 p-6 rounded-2xl">
-      <h3 class="font-extrabold text-amber-950 font-display text-base mb-1">⚠️ Important Disclaimer</h3>
-      <p class="text-amber-900 text-sm leading-relaxed">
-        Asha Old Clothes Buyer is NOT an NGO, charitable trust, or non-profit organization. We are a private textile collection, reuse, and recycling service. Clothing donations are directed to our private reuse operations, and do not qualify for government tax benefits, deductions, or official NGO donation receipts.
-      </p>
-    </div>
+      <!-- Section 1: Introduction -->
+      <section id="introduction" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">01</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Introduction</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          Welcome to the official Privacy Policy for <strong>Asha Old Clothes Buyer</strong>. This policy applies to our portal (oldclothesbuyer.com), mobile interfaces, doorstep logistical operations, and application databases. This documentation specifies exactly how our system tracks, holds, and processes customer records in complete compliance with Google Play Developer policies, ensuring optimal data safety.
+        </p>
+      </section>
 
-    <div class="space-y-3 pt-4 border-t border-slate-100">
-      <h2 class="text-xl sm:text-2xl font-bold text-slate-900 font-display">Contact Privacy Team</h2>
-      <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-        If you have any questions about this policy, or if you would like to request access, correction, or deletion of your personal data, you may contact our privacy team at <a href="mailto:asha.r.waghela@gmail.com" class="text-teal-600 font-semibold hover:underline">asha.r.waghela@gmail.com</a>.
-      </p>
+      <!-- Section 2: About Asha -->
+      <section id="about" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">02</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">About Asha Old Clothes Buyer</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          Asha Old Clothes Buyer coordinates the household textile resource lifecycle, serving neighborhoods across Thane and Navi Mumbai since 2000. We offer a direct door-to-door sorting mechanism. Premium worn clothes are appraised on-the-spot for commercial payouts, while other recyclable or general textiles are collected for environment-friendly mechanical reuse or industrial fiber processing.
+        </p>
+      </section>
+
+      <!-- Section 3: Information We Collect -->
+      <section id="collection" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">03</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Information We Collect</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          We collect personal credentials necessary to process doorstep scheduling and dispatch our agents. This includes direct records (such as name, email, phone number, physical address, and landmarks) alongside app performance metadata (such as IP addresses and standard device info).
+        </p>
+      </section>
+
+      <!-- Section 4: Google Sign-In -->
+      <section id="google-signin" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">04</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Google Sign-In</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          Our mobile application utilizes Google Sign-In OAuth 2.0 to offer streamlined registration. By logging in with Google, you authorize us to retrieve your primary verified email address, public profile name, and profile icon URL. This read-only login structure is tokenized and never accesses your private files, drive storage, or list of Google contacts.
+        </p>
+      </section>
+
+      <!-- Section 5: Email & Password Login -->
+      <section id="credentials" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">05</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Email & Password Login</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          For users signing up via standard email, we collect a secure password alongside your email address. All user password keys are processed via strong cryptographic one-way hashing protocols immediately at the user's local device prior to backend transport, rendering them invisible to our personnel.
+        </p>
+      </section>
+
+      <!-- Section 6: Firebase Authentication -->
+      <section id="firebase-auth" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">06</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Firebase Authentication</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          We integrate Google's secure Firebase Authentication Suite to run session states. Firebase securely processes login credentials, token refresh sequences, and user identification variables. Firebase operates in compliance with strict international security frameworks including SOC 1/2/3 and ISO 27001.
+        </p>
+      </section>
+
+      <!-- Section 7: Booking Information -->
+      <section id="booking-info" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">07</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Booking Information</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          When initiating a collection booking, we collect operational variables including preferred pickup dates, hours, weight estimates, preferred transaction formats (Donate, Recycle, or Sell), and special instructions regarding gated communities or logistics.
+        </p>
+      </section>
+
+      <!-- Section 8: Pickup Address -->
+      <section id="pickup-address" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">08</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Pickup Address</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          We collect your precise street address, apartment/flat coordinates, building names, landmarks, and PIN code. This logistics dataset is provided voluntarily to allow our vehicle fleet to locate and reach your doorstep for textile collections.
+        </p>
+      </section>
+
+      <!-- Section 9: Location Permission -->
+      <section id="location-permission" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">09</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Location Permission</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          To simplify form inputs, our mobile client may request access to precise device-level GPS coordinates. This action is fully optional. If denied, you can manually type your address into our pickup fields without any operational performance limitations.
+        </p>
+      </section>
+
+      <!-- Section 10: Camera & Photo Uploads -->
+      <section id="camera-uploads" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">10</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Camera & Photo Uploads</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          Our application lets users capture or upload digital photos of their garments from their camera rolls to request condition assessments. This feature is strictly user-activated. Uploaded files are solely used for conditioning evaluations and are never shared with external ad platforms.
+        </p>
+      </section>
+
+      <!-- Section 11: Push Notifications -->
+      <section id="push-notifications" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">11</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Push Notifications</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          We distribute push notifications to send transactional alerts about your pickup assignments, truck locations, and payment receipts. You can withdraw your push consent anytime through your system settings.
+        </p>
+      </section>
+
+      <!-- Section 12: Firebase Firestore -->
+      <section id="firestore" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">12</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Firebase Firestore</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          We record profile data and booking logs inside Google's Firebase Firestore database. The platform is configured with rigorous rule structures that isolate databases and prevent any unauthorized cross-account reading or database exposure.
+        </p>
+      </section>
+
+      <!-- Section 13: Firebase Cloud Messaging -->
+      <section id="fcm" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">13</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Firebase Cloud Messaging</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          Our alert distribution pipeline runs through Google's Firebase Cloud Messaging (FCM). FCM handles notifications using secure background device registration tokens, ensuring fast delivery without exposing actual email addresses or phone lines.
+        </p>
+      </section>
+
+      <!-- Section 14: How We Use Information -->
+      <section id="how-use" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">14</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">How We Use Information</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          We process collected information to fulfill doorstep requests, complete payouts, verify user profiles, execute routing logistics, maintain system integrity against spam accounts, and coordinate our collection staff.
+        </p>
+      </section>
+
+      <!-- Section 15: Information Sharing -->
+      <section id="sharing" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">15</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Information Sharing</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          We never lease, trade, or share user profiles with third-party advertisers. Logistics details (such as address, phone number, and collection lists) are securely transmitted only to authorized regional dispatch operators (e.g., in Thane or Navi Mumbai) solely to complete your requested pickups.
+        </p>
+      </section>
+
+      <!-- Section 16: Third-Party Services -->
+      <section id="third-party" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">16</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Third-Party Services</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          We integrate trusted third-party service components like Google Maps API for address validations and WhatsApp API for automated communications. These services process variables under their respective corporate policies.
+        </p>
+      </section>
+
+      <!-- Section 17: Cookies -->
+      <section id="cookies" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">17</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Cookies Policy</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          Our website stores small cookies, local storage strings, and session state files to remember login statuses and configurations. You can configure your browser settings to reject cookies without losing core platform features.
+        </p>
+      </section>
+
+      <!-- Section 18: Analytics -->
+      <section id="analytics" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">18</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Traffic Analytics</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          We run standard anonymized analytical software logs (including Google Tag Manager) to evaluate page click trends, response rates, and regional traffic volumes, allowing us to continuously improve server speeds and page layouts.
+        </p>
+      </section>
+
+      <!-- Section 19: Data Security Systems -->
+      <section id="security" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">19</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Data Security Systems</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          We implement industry-standard administrative and technical protective steps. All digital transmissions are encrypted under secure 256-bit HTTPS protocols. Databases are secured behind firewalls and monitored periodically for compliance.
+        </p>
+      </section>
+
+      <!-- Section 20: Data Retention Mandates -->
+      <section id="retention" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">20</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Data Retention Mandates</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          We hold customer details only for the duration required to process pickup schedules, manage accounts, or comply with commercial fiscal audit requirements, after which records are deleted or anonymized.
+        </p>
+      </section>
+
+      <!-- Section 21: User Data Rights -->
+      <section id="rights" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">21</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">User Data Rights</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          Our users maintain complete control over their datasets. You have the right to request transcripts of stored records, submit correction requests for any field, download registration ledgers, or command full data erasure.
+        </p>
+      </section>
+
+      <!-- Section 22: Profile Management -->
+      <section id="profile-mgmt" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">22</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Profile Management</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          You can update, edit, or adjust your saved telephone numbers, alternate login emails, and physical doorstep coordinates directly inside your application user account panel at any time.
+        </p>
+      </section>
+
+      <!-- Section 23: Account Deletion -->
+      <section id="account-deletion" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">23</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Account Deletion</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          In full accordance with Google Play Developer policy, we offer self-service profile deletion. You can initiate full removal from your account page or visit our dedicated <a href="/account-deletion.html" class="text-teal-600 font-bold hover:underline">Account Deletion Portal</a>. Upon activation, all names, email logins, addresses, and phone records are completely and irreversibly wiped.
+        </p>
+      </section>
+
+      <!-- Section 24: Children's Privacy -->
+      <section id="children" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">24</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Children's Privacy</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          Our logistics services are reserved for adults (minimum 18 years of age). We do not collect or keep data belonging to children under 13. If discovered, we immediately delete the records from our servers.
+        </p>
+      </section>
+
+      <!-- Section 25: Regional Availability -->
+      <section id="availability" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">25</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Regional Availability</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          Physical operations and collection services are restricted exclusively to defined areas in Thane, Navi Mumbai, and neighboring operational corridors in Maharashtra, India.
+        </p>
+      </section>
+
+      <!-- Section 26: Contact Details -->
+      <section id="contact" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-6">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">26</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Contact Details</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+          For physical inspections, data access requests, or policy inquiries, feel free to contact our operational department directly:
+        </p>
+
+        <!-- Premium Contact Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-sans">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-100/80 flex flex-col justify-between">
+            <div>
+              <span class="text-lg mb-2 block">📧</span>
+              <h5 class="font-bold text-slate-900 text-xs">Official Email</h5>
+              <p class="text-[10px] text-slate-500 mt-0.5 leading-snug">Operations compliance inbox</p>
+            </div>
+            <a href="mailto:asha.r.waghela@gmail.com" class="text-xs font-bold text-teal-600 mt-3 block hover:underline">asha.r.waghela@gmail.com</a>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-100/80 flex flex-col justify-between">
+            <div>
+              <span class="text-lg mb-2 block">💬</span>
+              <h5 class="font-bold text-slate-900 text-xs">WhatsApp Helpline</h5>
+              <p class="text-[10px] text-slate-500 mt-0.5 leading-snug">Direct instant messaging</p>
+            </div>
+            <a href="https://wa.me/918828743006" class="text-xs font-bold text-teal-600 mt-3 block hover:underline">+91 88287 43006</a>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-100/80 flex flex-col justify-between">
+            <div>
+              <span class="text-lg mb-2 block">🌐</span>
+              <h5 class="font-bold text-slate-900 text-xs">Corporate URL</h5>
+              <p class="text-[10px] text-slate-500 mt-0.5 leading-snug">Main online registration system</p>
+            </div>
+            <a href="https://oldclothesbuyer.com" class="text-xs font-bold text-teal-600 mt-3 block hover:underline">oldclothesbuyer.com</a>
+          </div>
+        </div>
+
+        <!-- Call and WhatsApp Action buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2 font-sans">
+          <a href="https://wa.me/918828743006?text=Hi!%20I%20have%20a%20data%20privacy%20question%20regarding%20Asha%20Old%20Clothes%20Buyer." class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-sm shadow-md transition-all">
+            <svg class="h-4 w-4 fill-current text-white" viewBox="0 0 24 24">
+              <path d="M12.01 2.003c-5.502 0-9.979 4.478-9.979 9.979 0 1.758.455 3.41 1.254 4.851L2 22l5.318-1.396c1.393.76 2.975 1.192 4.657 1.192 5.502 0 9.979-4.478 9.979-9.979 0-5.501-4.477-9.979-9.979-9.979zm5.793 13.916c-.244.686-1.218 1.253-1.688 1.309-.47.056-.939.231-3.037-.591-2.527-.991-4.137-3.565-4.263-3.733-.127-.168-1.025-1.365-1.025-2.602 0-1.237.649-1.844.88-2.096.23-.252.502-.315.67-.315.167 0 .334.004.48.012.153.008.358-.057.561.428.21.503.717 1.745.779 1.871.063.126.104.272.02.44-.083.168-.125.272-.25.42l-.377.44c-.122.143-.254.298-.11.546.144.248.638 1.053 1.371 1.705.94.84 1.733 1.1 1.984 1.226.251.126.398.105.545-.063.146-.168.628-.734.796-.986.167-.252.334-.21.564-.126.23.084 1.464.692 1.715.818.251.126.418.189.481.294.063.105.063.609-.181 1.295z"/>
+            </svg>
+            <span>WhatsApp Us Now</span>
+          </a>
+          <a href="tel:+918828743006" class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-800 font-extrabold text-sm transition-all">
+            <span>📞 Call Helpline Now</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 27: FAQs -->
+      <section id="faqs" class="scroll-mt-28 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100/90 space-y-6">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black bg-teal-50 text-teal-600 px-2.5 py-1 rounded-md">27</span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 font-display">Security FAQs</h2>
+        </div>
+        <div class="space-y-4 divide-y divide-slate-100 font-sans">
+          
+          <div class="pt-0">
+            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-1">Q1: Is Asha Old Clothes Buyer a registered NGO?</h5>
+            <p class="text-xs text-slate-650 leading-relaxed">No. We are a private commercial textile company. Collections do not qualify for NGO donation tax deductions under Indian tax rules.</p>
+          </div>
+
+          <div class="pt-3">
+            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-1">Q2: Do you share or rent out client address records?</h5>
+            <p class="text-xs text-slate-650 leading-relaxed">Never. Stored addresses are restricted to active doorstep vehicle dispatchers and are not shared with advertisers.</p>
+          </div>
+
+          <div class="pt-3">
+            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-1">Q3: What access is acquired during Google Sign-In?</h5>
+            <p class="text-xs text-slate-650 leading-relaxed">We receive only verified email coordinates, Google profile names, and photo URL tags. We cannot access personal contacts, drive files, or photos.</p>
+          </div>
+
+          <div class="pt-3">
+            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-1">Q4: Are uploaded clothing condition pictures publicly viewable?</h5>
+            <p class="text-xs text-slate-650 leading-relaxed">No. Uploaded appraisal photos are held in secure private database silos and are accessed strictly by our sorting evaluators.</p>
+          </div>
+
+          <div class="pt-3">
+            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-1">Q5: Can I request manual scheduling without GPS permission?</h5>
+            <p class="text-xs text-slate-650 leading-relaxed">Absolutely. GPS sharing is completely optional. Denying location services does not restrict any core doorstep booking capabilities.</p>
+          </div>
+
+          <div class="pt-3">
+            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-1">Q6: For how long are doorstep booking logs preserved?</h5>
+            <p class="text-xs text-slate-650 leading-relaxed">Logs are retained only as long as necessary to coordinate dispatch routines, comply with audits, or manage account history.</p>
+          </div>
+
+          <div class="pt-3">
+            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-1">Q7: How can I execute full account data deletion?</h5>
+            <p class="text-xs text-slate-650 leading-relaxed">Registered users can initiate self-service data erasure directly within account settings or on our dedicated Account Deletion page.</p>
+          </div>
+
+          <div class="pt-3">
+            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-1">Q8: Do you track background location coordinates when the client is closed?</h5>
+            <p class="text-xs text-slate-650 leading-relaxed">No background tracking of coordinates or real-time travel telemetry is performed. Coordinates are used solely when booking coordinates are set.</p>
+          </div>
+
+          <div class="pt-3">
+            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-1">Q9: Where is email login security managed?</h5>
+            <p class="text-xs text-slate-650 leading-relaxed">All active sessions are maintained by Google Firebase Authentication systems using industry-standard OAuth procedures.</p>
+          </div>
+
+          <div class="pt-3">
+            <h5 class="font-bold text-slate-900 text-xs sm:text-sm mb-1">Q10: Can mobile notifications be turned off?</h5>
+            <p class="text-xs text-slate-650 leading-relaxed">Yes. You can manage notification settings inside your operating system's settings menu at any time.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Mobile Direct Compliance Help Card (lg:hidden) -->
+      <div class="block lg:hidden bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden">
+        <div class="absolute right-0 top-0 text-7xl opacity-5 select-none pointer-events-none">🛡️</div>
+        <h4 class="text-base font-bold font-display mb-1.5">Direct Compliance Help</h4>
+        <p class="text-xs text-slate-300 leading-relaxed mb-4">Our operations office and data safety coordinator is accessible instantly via chat.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="https://wa.me/918828743006?text=Hi!%20I%20have%20a%20question%20regarding%20Asha%20Old%20Clothes%20Buyer%20Privacy%20Policy." class="flex items-center justify-center gap-2 py-3 rounded-xl bg-teal-500 hover:bg-teal-600 transition text-white text-sm font-bold font-sans">
+            💬 WhatsApp Chat
+          </a>
+          <a href="tel:+918828743006" class="flex items-center justify-center gap-2 py-3 rounded-xl bg-white/10 hover:bg-white/20 transition text-white text-sm font-bold font-sans">
+            📞 Direct Call Support
+          </a>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -446,6 +971,63 @@
   </button>
 </div>
 
+<style>
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 130px; /* Precise scroll offset for sticky header */
+  }
+  /* Custom thin scrollbar for directory */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+
+  /* Reading Experience Enhancements */
+  main section {
+    padding: 1.5rem !important;
+    border-color: rgba(241, 245, 249, 0.9) !important;
+  }
+  @media (min-width: 640px) {
+    main section {
+      padding: 2.25rem !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    main section {
+      padding: 2.75rem !important;
+    }
+  }
+
+  /* Main text paragraphs */
+  main section > p {
+    font-size: 0.9375rem !important; /* 15px */
+    line-height: 1.85 !important; /* Enhanced line height */
+    color: #475569 !important; /* Warm deep slate-600 */
+    margin-top: 1.25rem !important; /* Better heading spacing */
+  }
+
+  /* FAQ Accordion Readability */
+  #faqs .divide-y h5 {
+    font-size: 0.9375rem !important; /* 15px */
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin-bottom: 0.375rem !important;
+  }
+  #faqs .divide-y p {
+    font-size: 0.875rem !important; /* 14px */
+    line-height: 1.7 !important;
+    color: #475569 !important;
+  }
+</style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menuBtn');
@@ -490,13 +1072,13 @@
         isOpen = !isOpen;
         if (isOpen) {
           menu.classList.remove('opacity-0', 'pointer-events-none', 'scale-90', 'translate-y-4');
-          menu.classList.add('opacity-100', 'scale-100', 'translate-y-0');
+          menu.classList.add('opacity-100', 'pointer-events-auto', 'scale-100', 'translate-y-0');
           waIcon.classList.remove('scale-100', 'rotate-0');
           waIcon.classList.add('scale-0', 'rotate-[360deg]');
           closeIcon.classList.remove('scale-0', 'rotate-90');
           closeIcon.classList.add('scale-100', 'rotate-0');
         } else {
-          menu.classList.remove('opacity-100', 'scale-100', 'translate-y-0');
+          menu.classList.remove('opacity-100', 'pointer-events-auto', 'scale-100', 'translate-y-0');
           menu.classList.add('opacity-0', 'pointer-events-none', 'scale-90', 'translate-y-4');
           waIcon.classList.remove('scale-0', 'rotate-[360deg]');
           waIcon.classList.add('scale-100', 'rotate-0');
@@ -538,6 +1120,97 @@
         activeEl.classList.remove('text-slate-700', 'font-medium');
       }
     }
+
+    // Mobile TOC accordion toggle logic
+    const mobileTocToggle = document.getElementById('mobileTocToggle');
+    const mobileTocContent = document.getElementById('mobileTocContent');
+    const mobileTocArrow = document.getElementById('mobileTocArrow');
+    
+    if (mobileTocToggle && mobileTocContent && mobileTocArrow) {
+      mobileTocToggle.addEventListener('click', () => {
+        const isHidden = mobileTocContent.classList.contains('hidden');
+        if (isHidden) {
+          mobileTocContent.classList.remove('hidden');
+          mobileTocArrow.classList.add('rotate-180');
+        } else {
+          mobileTocContent.classList.add('hidden');
+          mobileTocArrow.classList.remove('rotate-180');
+        }
+      });
+
+      // Collapse mobile TOC when a section link is clicked
+      const mobileLinks = mobileTocContent.querySelectorAll('.mobile-toc-link');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileTocContent.classList.add('hidden');
+          mobileTocArrow.classList.remove('rotate-180');
+        });
+      });
+    }
+
+    // Custom smooth scroll with exact header offset
+    const allTocLinks = document.querySelectorAll('.toc-link, .mobile-toc-link');
+    allTocLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          const headerHeight = document.getElementById('header')?.offsetHeight || 110;
+          const targetOffset = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 16;
+          window.scrollTo({
+            top: targetOffset,
+            behavior: 'smooth'
+          });
+          
+          // Silently update address bar hash without trigger standard jump
+          history.pushState(null, null, targetId);
+        }
+      });
+    });
+
+    // High performance ScrollSpy for Table of Contents (Desktop and Mobile)
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const mobileTocLinks = document.querySelectorAll('.mobile-toc-link');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-15% 0px -70% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          
+          // Highlight Desktop Links
+          tocLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('bg-teal-50', 'text-teal-600', 'font-black', 'border-l-2', 'border-teal-500', 'pl-2.5');
+              link.classList.remove('text-slate-600');
+            } else {
+              link.classList.remove('bg-teal-50', 'text-teal-600', 'font-black', 'border-l-2', 'border-teal-500', 'pl-2.5');
+              link.classList.add('text-slate-600');
+            }
+          });
+
+          // Highlight Mobile Links
+          mobileTocLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('bg-teal-50', 'text-teal-600', 'font-black', 'border-l-2', 'border-teal-500', 'pl-2.5');
+              link.classList.remove('text-slate-600');
+            } else {
+              link.classList.remove('bg-teal-50', 'text-teal-600', 'font-black', 'border-l-2', 'border-teal-500', 'pl-2.5');
+              link.classList.add('text-slate-600');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
   });
 </script>
 
