@@ -169,6 +169,28 @@
     ]
   }
   </script>
+  <!-- ⭐ SoftwareApplication Schema (Android App) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Asha Old Clothes Buyer App",
+    "operatingSystem": "ANDROID",
+    "applicationCategory": "LifestyleApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
+    },
+    "url": "https://play.google.com/store/apps/details?id=com.aistudio.ashaclothes.kvbmq",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.aistudio.ashaclothes.kvbmq",
+    "author": {
+      "@type": "Organization",
+      "name": "Asha Old Clothes Buyer",
+      "url": "https://oldclothesbuyer.com"
+    }
+  }
+  </script>
   <!-- ⭐ FAQ Schema -->
   <script type="application/ld+json">
   {
@@ -334,8 +356,21 @@
       <a href="/navi-mumbai.html" class="hover:text-teal-600 transition-colors">Navi Mumbai</a>
       <a href="/textile-reuse-recycling-initiative.html" class="hover:text-teal-600 transition-colors flex items-center gap-1">♻️ Eco Initiative</a>
     </nav>
-    <!-- Call Action Button -->
-    <div class="hidden lg:flex items-center">
+    <!-- Header Action Buttons -->
+    <div class="hidden lg:flex items-center gap-2.5">
+      <a href="https://play.google.com/store/apps/details?id=com.aistudio.ashaclothes.kvbmq"
+         target="_blank"
+         rel="noopener"
+         class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-3.5 py-2.5 rounded-xl font-bold text-xs shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 whitespace-nowrap border border-slate-700/60"
+         title="Download Asha Old Clothes Buyer App on Google Play">
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+          <path d="M3.609 1.814L13.793 12 3.61 22.186a2.38 2.38 0 01-.61-1.642V3.456c0-.64.22-1.228.609-1.642z" fill="#00C1A6"/>
+          <path d="M17.793 7.999L5.913 1.214 15.207 10.586 17.793 7.999z" fill="#00D27B"/>
+          <path d="M15.207 13.414L5.913 22.786 17.793 16.001 15.207 13.414z" fill="#FF334B"/>
+          <path d="M19.771 9.414c.547.313.836.85.836 1.586 0 .736-.289 1.273-.836 1.586l-1.978 1.415-2.586-2.586 2.586-2.586 1.978 1.171z" fill="#FFBA00"/>
+        </svg>
+        <span>Download App</span>
+      </a>
       <a href="tel:+918828743006"
          class="inline-flex items-center gap-2 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 whitespace-nowrap">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
@@ -344,12 +379,27 @@
         <span>Call Now</span>
       </a>
     </div>
-    <!-- Mobile menu button -->
-    <button id="menuBtn" class="lg:hidden p-2 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors" aria-label="Toggle Menu">
-      <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
+    <!-- Mobile header actions -->
+    <div class="flex items-center gap-2 lg:hidden">
+      <a href="https://play.google.com/store/apps/details?id=com.aistudio.ashaclothes.kvbmq"
+         target="_blank"
+         rel="noopener"
+         class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 text-white font-bold text-xs shadow-sm border border-slate-700/60"
+         aria-label="Download App on Google Play">
+        <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none">
+          <path d="M3.609 1.814L13.793 12 3.61 22.186a2.38 2.38 0 01-.61-1.642V3.456c0-.64.22-1.228.609-1.642z" fill="#00C1A6"/>
+          <path d="M17.793 7.999L5.913 1.214 15.207 10.586 17.793 7.999z" fill="#00D27B"/>
+          <path d="M15.207 13.414L5.913 22.786 17.793 16.001 15.207 13.414z" fill="#FF334B"/>
+          <path d="M19.771 9.414c.547.313.836.85.836 1.586 0 .736-.289 1.273-.836 1.586l-1.978 1.415-2.586-2.586 2.586-2.586 1.978 1.171z" fill="#FFBA00"/>
+        </svg>
+        <span>App</span>
+      </a>
+      <button id="menuBtn" class="p-2 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors" aria-label="Toggle Menu">
+        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
 <!-- REDESIGNED PREMIUM MOBILE NAVIGATION (FULL-SCREEN OVERLAY) -->
@@ -379,6 +429,26 @@
         </svg>
       </button>
     </div>
+    <!-- App Feature Card in Mobile Drawer -->
+    <div class="mt-4 p-3.5 rounded-2xl bg-gradient-to-br from-slate-900 to-teal-950 text-white shadow-md border border-teal-500/20">
+      <div class="flex items-center justify-between mb-1.5">
+        <span class="text-[10px] font-black uppercase tracking-wider text-emerald-400">Official Android App</span>
+        <span class="text-[9px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full font-bold">Thane Only</span>
+      </div>
+      <p class="text-xs text-slate-300 mb-2.5">Book old clothes pickup in Thane directly from your mobile.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.aistudio.ashaclothes.kvbmq"
+         target="_blank"
+         rel="noopener"
+         class="flex items-center justify-center gap-2 w-full py-2.5 px-3 bg-white hover:bg-slate-100 text-slate-900 rounded-xl font-bold text-xs shadow transition">
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+          <path d="M3.609 1.814L13.793 12 3.61 22.186a2.38 2.38 0 01-.61-1.642V3.456c0-.64.22-1.228.609-1.642z" fill="#00C1A6"/>
+          <path d="M17.793 7.999L5.913 1.214 15.207 10.586 17.793 7.999z" fill="#00D27B"/>
+          <path d="M15.207 13.414L5.913 22.786 17.793 16.001 15.207 13.414z" fill="#FF334B"/>
+          <path d="M19.771 9.414c.547.313.836.85.836 1.586 0 .736-.289 1.273-.836 1.586l-1.978 1.415-2.586-2.586 2.586-2.586 1.978 1.171z" fill="#FFBA00"/>
+        </svg>
+        <span>Download on Google Play</span>
+      </a>
+    </div>
     <!-- Navigation Groups -->
     <div class="flex-1 py-6 space-y-6 overflow-y-auto pr-1">
       <!-- Group 1: Main Pages -->
@@ -388,6 +458,10 @@
           <a id="nav-home" href="/" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 hover:bg-teal-50 hover:text-teal-600 font-medium transition-all duration-200">
             <span class="flex items-center gap-2.5 text-sm"><span>🏠</span> Home</span>
             <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.aistudio.ashaclothes.kvbmq" target="_blank" rel="noopener" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-teal-900 bg-teal-50 hover:bg-teal-100/80 font-bold transition-all duration-200 border border-teal-200/60">
+            <span class="flex items-center gap-2.5 text-sm"><span class="text-base">📲</span> Download App</span>
+            <span class="text-[9px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-teal-600 text-white">Google Play</span>
           </a>
           <a id="nav-prices" href="/prices.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 hover:bg-teal-50 hover:text-teal-600 font-medium transition-all duration-200">
             <span class="flex items-center gap-2.5 text-sm"><span>💰</span> Rates & Prices</span>
@@ -456,15 +530,23 @@
     </div>
     <!-- Bottom CTA Section -->
     <div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
-      <div class="text-center">
-        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 font-display">Instant Direct Connection</p>
-        <p class="text-[11px] text-slate-500 font-sans">Contact our team instantly via phone call or WhatsApp.</p>
-      </div>
+      <a href="https://play.google.com/store/apps/details?id=com.aistudio.ashaclothes.kvbmq"
+         target="_blank"
+         rel="noopener"
+         class="flex items-center justify-center gap-2 bg-slate-900 hover:bg-black text-white py-3 rounded-xl font-bold text-xs shadow-md transition duration-200 border border-slate-700/60">
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+          <path d="M3.609 1.814L13.793 12 3.61 22.186a2.38 2.38 0 01-.61-1.642V3.456c0-.64.22-1.228.609-1.642z" fill="#00C1A6"/>
+          <path d="M17.793 7.999L5.913 1.214 15.207 10.586 17.793 7.999z" fill="#00D27B"/>
+          <path d="M15.207 13.414L5.913 22.786 17.793 16.001 15.207 13.414z" fill="#FF334B"/>
+          <path d="M19.771 9.414c.547.313.836.85.836 1.586 0 .736-.289 1.273-.836 1.586l-1.978 1.415-2.586-2.586 2.586-2.586 1.978 1.171z" fill="#FFBA00"/>
+        </svg>
+        <span>Download on Google Play</span>
+      </a>
       <div class="grid grid-cols-2 gap-2.5">
-        <a href="tel:+918828743006" class="flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white py-3 rounded-xl font-bold text-xs shadow-md transition duration-200">
+        <a href="tel:+918828743006" class="flex items-center justify-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 py-2.5 rounded-xl font-bold text-xs transition duration-200">
           <span>📞 Call Now</span>
         </a>
-        <a href="https://wa.me/918828743006?text=Hi!%20I%20want%20to%20schedule%20a%20doorstep%20clothing%20donation%20pickup." class="flex items-center justify-center gap-1.5 bg-[#25D366] hover:bg-[#20ba5a] text-white py-3 rounded-xl font-bold text-xs shadow-md transition duration-200">
+        <a href="https://wa.me/918828743006?text=Hi!%20I%20want%20to%20schedule%20a%20doorstep%20clothing%20donation%20pickup." class="flex items-center justify-center gap-1.5 bg-[#25D366] hover:bg-[#20ba5a] text-white py-2.5 rounded-xl font-bold text-xs shadow-sm transition duration-200">
           <svg class="h-4 w-4 fill-current text-white shrink-0" viewBox="0 0 24 24">
             <path d="M12.01 2.003c-5.502 0-9.979 4.478-9.979 9.979 0 1.758.455 3.41 1.254 4.851L2 22l5.318-1.396c1.393.76 2.975 1.192 4.657 1.192 5.502 0 9.979-4.478 9.979-9.979 0-5.501-4.477-9.979-9.979-9.979zm5.793 13.916c-.244.686-1.218 1.253-1.688 1.309-.47.056-.939.231-3.037-.591-2.527-.991-4.137-3.565-4.263-3.733-.127-.168-1.025-1.365-1.025-2.602 0-1.237.649-1.844.88-2.096.23-.252.502-.315.67-.315.167 0 .334.004.48.012.153.008.358-.057.561.428.21.503.717 1.745.779 1.871.063.126.104.272.02.44-.083.168-.125.272-.25.42l-.377.44c-.122.143-.254.298-.11.546.144.248.638 1.053 1.371 1.705.94.84 1.733 1.1 1.984 1.226.251.126.398.105.545-.063.146-.168.628-.734.796-.986.167-.252.334-.21.564-.126.23.084 1.464.692 1.715.818.251.126.418.189.481.294.063.105.063.609-.181 1.295z"/>
           </svg>
@@ -574,6 +656,45 @@
   });
 </script>
 <main>
+  <!-- APP DOWNLOAD PROMO BANNER (HOMEPAGE) -->
+  <aside aria-label="Official Android App Download Banner" class="relative bg-gradient-to-r from-slate-900 via-teal-950 to-slate-900 text-white border-b border-teal-500/20 py-3.5 px-4 sm:px-6 shadow-md overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.18),transparent_50%)] pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left relative z-10">
+      <div class="flex items-center gap-3.5 flex-col sm:flex-row">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-teal-500 to-emerald-400 p-0.5 shadow-md shrink-0 flex items-center justify-center">
+          <img src="/images/logo.webp?v=3" alt="Asha Old Clothes Buyer App Logo" class="w-11 h-11 object-contain rounded-[14px] bg-white p-0.5" width="44" height="44" />
+        </div>
+        <div>
+          <div class="flex items-center gap-2 justify-center md:justify-start flex-wrap">
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              Android App
+            </span>
+            <span class="text-xs text-amber-300 font-semibold">📍 Pickup service available only in Thane city.</span>
+          </div>
+          <h2 class="text-base sm:text-lg font-extrabold text-white font-display mt-0.5">Download Asha Old Clothes Buyer App</h2>
+          <p class="text-xs sm:text-sm text-slate-300">Book your old clothes pickup easily through our official Android app.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="https://play.google.com/store/apps/details?id=com.aistudio.ashaclothes.kvbmq"
+           target="_blank"
+           rel="noopener"
+           class="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white hover:bg-slate-100 text-slate-900 font-extrabold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 border border-slate-200">
+          <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
+            <path d="M3.609 1.814L13.793 12 3.61 22.186a2.38 2.38 0 01-.61-1.642V3.456c0-.64.22-1.228.609-1.642z" fill="#00C1A6"/>
+            <path d="M17.793 7.999L5.913 1.214 15.207 10.586 17.793 7.999z" fill="#00D27B"/>
+            <path d="M15.207 13.414L5.913 22.786 17.793 16.001 15.207 13.414z" fill="#FF334B"/>
+            <path d="M19.771 9.414c.547.313.836.85.836 1.586 0 .736-.289 1.273-.836 1.586l-1.978 1.415-2.586-2.586 2.586-2.586 1.978 1.171z" fill="#FFBA00"/>
+          </svg>
+          <div class="text-left leading-tight">
+            <div class="text-[9px] uppercase tracking-wider text-slate-500 font-bold">Download on</div>
+            <div class="text-xs sm:text-sm font-black text-slate-900 font-display">Google Play</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </aside>
   <!-- Hero -->
   <section class="relative overflow-hidden bg-gradient-to-b from-slate-50 via-teal-50/10 to-white py-20 lg:py-28">
     <!-- Ambient Blur Shapes -->
@@ -756,6 +877,146 @@
       </div>
     </div>
   </section>
+
+  <!-- DEDICATED APP PROMOTION SECTION -->
+  <section id="app" class="py-16 sm:py-24 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden border-t border-slate-100">
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="mx-auto max-w-7xl px-6 relative z-10">
+      <div class="bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 rounded-3xl p-8 sm:p-12 lg:p-16 text-white shadow-2xl border border-teal-500/20 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-80 h-80 bg-teal-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+          
+          <!-- Left Column: Content -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Official Android Release
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight font-display text-white">
+              Asha Old Clothes Buyer App – Now on Google Play
+            </h2>
+
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+              Book old clothes pickup conveniently from your mobile. Choose donation or selling options and submit your pickup request through our app.
+            </p>
+
+            <!-- Important Service Area Notice -->
+            <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-400/30 text-amber-200 text-xs sm:text-sm font-medium flex items-start gap-3">
+              <span class="text-lg shrink-0">📍</span>
+              <div>
+                <strong class="font-bold text-amber-300">Important Service Notice:</strong> Pickup service available only in Thane city. Our doorstep team operates exclusively within Thane residential societies and localities.
+              </div>
+            </div>
+
+            <!-- App Highlights / Features -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">
+                <span class="text-xl shrink-0">📦</span>
+                <div>
+                  <h3 class="font-bold text-white text-sm font-display">Old Clothes Pickup in Thane</h3>
+                  <p class="text-xs text-slate-300 mt-0.5">Schedule convenient doorstep pickup across Thane neighborhoods with a few taps.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">
+                <span class="text-xl shrink-0">🤝</span>
+                <div>
+                  <h3 class="font-bold text-white text-sm font-display">Donate or Sell Old Clothes in Thane</h3>
+                  <p class="text-xs text-slate-300 mt-0.5">Easily select whether you wish to donate for eco-causes or sell wearable garments for instant spot payout.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">
+                <span class="text-xl shrink-0">⚖️</span>
+                <div>
+                  <h3 class="font-bold text-white text-sm font-display">Standard Minimum Weight</h3>
+                  <p class="text-xs text-slate-300 mt-0.5">Standard minimum pickup requirement applies (8 to 10 kg or 30–40 items) for doorstep visit feasibility.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">
+                <span class="text-xl shrink-0">⚡</span>
+                <div>
+                  <h3 class="font-bold text-white text-sm font-display">Download Old Clothes Buyer App</h3>
+                  <p class="text-xs text-slate-300 mt-0.5">Fast, free, and secure booking on your Android phone anytime.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Area -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
+              <a href="https://play.google.com/store/apps/details?id=com.aistudio.ashaclothes.kvbmq"
+                 target="_blank"
+                 rel="noopener"
+                 class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-slate-100 text-slate-950 font-black rounded-2xl text-base shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 border border-slate-200 group">
+                <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none">
+                  <path d="M3.609 1.814L13.793 12 3.61 22.186a2.38 2.38 0 01-.61-1.642V3.456c0-.64.22-1.228.609-1.642z" fill="#00C1A6"/>
+                  <path d="M17.793 7.999L5.913 1.214 15.207 10.586 17.793 7.999z" fill="#00D27B"/>
+                  <path d="M15.207 13.414L5.913 22.786 17.793 16.001 15.207 13.414z" fill="#FF334B"/>
+                  <path d="M19.771 9.414c.547.313.836.85.836 1.586 0 .736-.289 1.273-.836 1.586l-1.978 1.415-2.586-2.586 2.586-2.586 1.978 1.171z" fill="#FFBA00"/>
+                </svg>
+                <div class="text-left leading-tight">
+                  <div class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">GET IT ON</div>
+                  <div class="text-base font-black text-slate-900 font-display">Get the App on Google Play</div>
+                </div>
+              </a>
+              <span class="text-xs text-slate-400 font-medium text-center sm:text-left">
+                Official Android App • Free Download
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Visual Mockup / App Card -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="w-full max-w-sm rounded-3xl bg-gradient-to-b from-white/10 to-white/5 border border-white/20 p-6 backdrop-blur-md shadow-2xl relative">
+              <div class="flex items-center gap-4 pb-5 border-b border-white/10">
+                <div class="w-16 h-16 rounded-2xl bg-white p-2 shadow-lg shrink-0 flex items-center justify-center">
+                  <img src="/images/logo.webp?v=3" alt="Asha Old Clothes Buyer App Icon" class="w-full h-full object-contain" width="64" height="64" />
+                </div>
+                <div>
+                  <h4 class="font-black text-white text-base font-display">Asha Old Clothes Buyer</h4>
+                  <p class="text-xs text-teal-300 font-medium">Doorstep Pickup Service</p>
+                  <span class="inline-block mt-1 text-[10px] font-bold text-slate-300 bg-white/10 px-2 py-0.5 rounded-md">Android App</span>
+                </div>
+              </div>
+              <div class="py-5 space-y-3 text-xs text-slate-200">
+                <div class="flex items-center justify-between py-1.5 border-b border-white/5">
+                  <span class="text-slate-400">Category</span>
+                  <span class="font-semibold text-white">Lifestyle &amp; Eco Reuse</span>
+                </div>
+                <div class="flex items-center justify-between py-1.5 border-b border-white/5">
+                  <span class="text-slate-400">Service Location</span>
+                  <span class="font-semibold text-emerald-400">Thane City Only</span>
+                </div>
+                <div class="flex items-center justify-between py-1.5 border-b border-white/5">
+                  <span class="text-slate-400">Pickup Type</span>
+                  <span class="font-semibold text-white">Free Doorstep Visit</span>
+                </div>
+                <div class="flex items-center justify-between py-1.5 border-b border-white/5">
+                  <span class="text-slate-400">Options</span>
+                  <span class="font-semibold text-white">Donate or Sell</span>
+                </div>
+                <div class="flex items-center justify-between py-1.5">
+                  <span class="text-slate-400">Store Platform</span>
+                  <span class="font-semibold text-white">Google Play Store</span>
+                </div>
+              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.aistudio.ashaclothes.kvbmq"
+                 target="_blank"
+                 rel="noopener"
+                 class="w-full flex items-center justify-center gap-2 py-3 px-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-extrabold text-xs rounded-xl shadow-lg transition duration-200">
+                <span>Download on Google Play</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Asha Professional Trust & Quality Standards -->
   <section class="py-20 sm:py-28 relative overflow-hidden bg-slate-50/50">
     <!-- Background accents -->
@@ -1232,6 +1493,7 @@
           <li><a href="/prices.html" class="hover:text-teal-400 transition-colors">Rates & Prices</a></li>
           <li><a href="/sell-old-clothes-before-shifting-thane.html" class="hover:text-teal-400 transition-colors flex items-center gap-1.5">🏠 Shifting Solutions</a></li>
           <li><a href="/textile-reuse-recycling-initiative.html" class="hover:text-teal-400 transition-colors flex items-center gap-1.5">♻️ Eco Initiative</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.aistudio.ashaclothes.kvbmq" target="_blank" rel="noopener" class="hover:text-teal-400 transition-colors flex items-center gap-1.5 text-teal-300 font-semibold"><span>📲</span> Asha Android App</a></li>
           <li><a href="https://oldclothesbuyerr.blogspot.com/" target="_blank" class="hover:text-teal-400 transition-colors">Visit Our Blog</a></li>
         </ul>
       </div>
