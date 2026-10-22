@@ -35,7 +35,8 @@ async function ensureAssets() {
     'favicon.ico',
     'images/favicon.ico',
     'images/Image1.jpg',
-    '.well-known/assetlinks.json'
+    '.well-known/assetlinks.json',
+    '.nojekyll'
   ];
 
   for (const relPath of assets) {

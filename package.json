@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "npx tailwindcss -i input.css -o tailwind.min.css --minify && rm -rf dist/public && tsx server.ts",
-    "build": "npx tailwindcss -i input.css -o tailwind.min.css --minify && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs && mkdir -p dist/public && cp -r 404.html CNAME _redirects account-deletion.html ads.txt favicon.ico logo.webp navi-mumbai.html prices.html privacy-policy.html robots.txt sell-old-clothes-before-shifting-thane.html sitemap.xml terms-and-conditions.html textile-reuse-recycling-initiative.html thane.html index.html tailwind.min.css images caving-lbn .well-known dist/public/ 2>/dev/null || true",
+    "build": "npx tailwindcss -i input.css -o tailwind.min.css --minify && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs && mkdir -p dist/public && cp -r 404.html CNAME _redirects account-deletion.html ads.txt favicon.ico logo.webp navi-mumbai.html prices.html privacy-policy.html robots.txt sell-old-clothes-before-shifting-thane.html sitemap.xml terms-and-conditions.html textile-reuse-recycling-initiative.html thane.html index.html tailwind.min.css images caving-lbn .well-known .nojekyll dist/public/ 2>/dev/null || true",
     "start": "node dist/server.cjs",
     "clean": "rm -rf dist server.js",
     "lint": "tsc -p tsconfig.json --noEmit"
