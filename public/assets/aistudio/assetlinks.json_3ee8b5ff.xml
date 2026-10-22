@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.aistudio.ashaclothes.kvbmq",
+      "sha256_cert_fingerprints": [
+        "75:C4:D9:16:09:29:58:D8:C3:5D:18:AC:CF:A8:3C:C8:AA:A2:A0:EA:AB:8C:0B:B2:98:E8:A4:6F:7A:A6:BC:CF"
+      ]
+    }
+  }
+]

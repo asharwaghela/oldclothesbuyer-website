@@ -34,7 +34,8 @@ async function ensureAssets() {
     'logo.webp',
     'favicon.ico',
     'images/favicon.ico',
-    'images/Image1.jpg'
+    'images/Image1.jpg',
+    '.well-known/assetlinks.json'
   ];
 
   for (const relPath of assets) {
@@ -57,6 +58,24 @@ async function ensureAssets() {
   }
 }
 
+// Explicit route for Android App Links Digital Asset Links
+app.get('/.well-known/assetlinks.json', (req, res) => {
+  const possiblePaths = [
+    path.join(publicDir, '.well-known', 'assetlinks.json'),
+    path.join(process.cwd(), '.well-known', 'assetlinks.json'),
+    path.join(process.cwd(), 'public', '.well-known', 'assetlinks.json')
+  ];
+  for (const filePath of possiblePaths) {
+    if (fs.existsSync(filePath)) {
+      res.setHeader('Content-Type', 'application/json');
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Cache-Control', 'public, max-age=86400');
+      return res.sendFile(filePath);
+    }
+  }
+  res.status(404).send('Not Found');
+});
+
 // Custom redirects from _redirects:
 const redirectMap: Record<string, string> = {
   '/index.html': '/',
@@ -78,6 +97,7 @@ app.use((req, res, next) => {
 // Serve static files with .html extension fallback
 // e.g., /thane will serve /thane.html, and / will serve index.html
 app.use(express.static(publicDir, {
+  dotfiles: 'allow',
   extensions: ['html', 'htm'],
   index: 'index.html',
   maxAge: '1d',
