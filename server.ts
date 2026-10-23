@@ -82,6 +82,7 @@ const redirectMap: Record<string, string> = {
   '/index.html': '/',
   '/prices': '/prices.html',
   '/thane': '/thane.html',
+  '/kalyan': '/kalyan.html',
   '/navi-mumbai': '/navi-mumbai.html',
   '/textile-reuse-recycling-initiative': '/textile-reuse-recycling-initiative.html',
   '/sell-old-clothes-before-shifting-thane': '/sell-old-clothes-before-shifting-thane.html'
